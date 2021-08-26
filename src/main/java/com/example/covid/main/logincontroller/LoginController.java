@@ -20,11 +20,13 @@ public class LoginController {
 	
 	@PostMapping("/signup")
 	public Register signUp(@RequestBody Register register) {
+		System.out.println("In signup");
 		return registerService.signUp(register);
 	}
 	
 	@PostMapping("/signin")
 	public SigninResponse signIn(@RequestBody SignInRequest signInRequest) {
+		System.out.println("In signin");
 		return registerService.signIn(signInRequest);
 	}
 }
