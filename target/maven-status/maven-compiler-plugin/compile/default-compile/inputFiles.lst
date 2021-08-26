@@ -1,0 +1,11 @@
+/root/Suyog/demo/src/main/java/com/example/covid/main/patientsdao/PatientsDao.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/logindao/RegisterDao.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/patientscontroller/PatientsController.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/logincontroller/LoginController.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/patientservice/PatientsService.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/loginbean/SigninResponse.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/loginbean/SignInRequest.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/loginservice/RegisterService.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/patientsbean/Patients.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/loginbean/Register.java
+/root/Suyog/demo/src/main/java/com/example/covid/main/SpringBootCovidDemo.java
