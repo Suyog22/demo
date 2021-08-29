@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-standalone  # DNS name 
+  name: mysql  # DNS name 
   labels:
     app: mysql
     tier: database
@@ -52,7 +52,9 @@ spec:
         tier: database
     spec:
       containers:
-      - image: mysql # image from docker-hub
+      - image: mysql:5.7 # image from docker-hub
+        args:
+          - "--ignore-db-dir=lost+found" # Workaround for https://github.com/docker-library/mysql/issues/186
         name: mysql 
         env:
         - name: MYSQL_ROOT_PASSWORD # Setting Root Password of mysql From a 'Secret'
@@ -60,6 +62,11 @@ spec:
             secretKeyRef:
               name: db-root-credentials # Name of the 'Secret'
               key: password   # 'key' inside the Secret which contains required 'value'
+        - name: MYSQL_USER # Setting USER username on mysql From a 'Secret'
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: username
         - name: MYSQL_PASSWORD # Setting USER Password on mysql From a 'Secret'
           valueFrom:
             secretKeyRef:
